@@ -11,5 +11,9 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    semi: [2, 'never'],
+    indent: ['error', 'space'],
+    'no-tabs': 0,
+    'arrow-body-style': ['error', 'never'],
   },
-};
+}

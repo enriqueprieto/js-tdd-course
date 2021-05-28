@@ -4,10 +4,12 @@
   "description": "Nossa biblioteca do curso JS com TDD na pratica",
   "main": "index.js",
   "scripts": {
-		"prepare": "husky install",
+    "prepare": "husky install",
     "lint": "./node_modules/.bin/eslint src/*.js",
-		"prepush": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "build": "./node_modules/.bin/webpack --progress",
+    "watch": "npm run build -- --watch"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,17 @@
   },
   "homepage": "https://github.com/enriqueprieto/js-tdd-course#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "chai": "^4.3.4",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "mocha": "^8.4.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   }
 }
