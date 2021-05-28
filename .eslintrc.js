@@ -12,7 +12,7 @@ module.exports = {
   },
   rules: {
     semi: [2, 'never'],
-    indent: ['error', 'space'],
+    indent: ['error', 2],
     'no-tabs': 0,
     'arrow-body-style': ['error', 'never'],
   },

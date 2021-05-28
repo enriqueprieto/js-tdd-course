@@ -1,3 +1,3 @@
-export const Mitch = () => {
-	return 'Ola'
-}
+export const Mitch = () => 'Ola'
+
+export default Mitch
